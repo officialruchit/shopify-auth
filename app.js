@@ -9,6 +9,7 @@ app.use(bodyParser.json());
 
 app.use("/", require("./modules/oauth/routes/routes"));
 app.use("/", require("./modules/customer/routes/customerRoutes"));
+app.use('/',require('./modules/product/routes/productRoutes'))
 
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);

@@ -43,7 +43,7 @@ const shopifyCallback = async (req, res) => {
       accessTokenPayload
     );
     const accessToken = response.data.access_token;
-
+    console.log(accessToken, " :ye chahiye");
     // Fetch shop details
     const shopResponse = await axios.get(
       `https://${shop}/admin/api/2023-07/shop.json`,
@@ -55,9 +55,9 @@ const shopifyCallback = async (req, res) => {
     );
 
     const shopData = shopResponse.data.shop;
-    console.log(shopData)
+    console.log(shopData);
     const storeName = shopData.domain;
-  console.log(storeName)
+    console.log(storeName);
     const email = shopData.email;
     const ownerName = shopData.shop_owner;
 
